@@ -52,11 +52,16 @@ class User extends Authenticatable
 
     public function sales()
     {
-        return $this->hasMany(Sale::class);
+        return $this->hasMany(Sale::class, 'investor_id');
     }
 
     public function products()
     {
-        return $this->hasMany(Product::class);
+        return $this->hasMany(Product::class, 'admin_id');
+    }
+
+    public function listings()
+    {
+        return $this->hasMany(Listing::class, 'admin_id');
     }
 }

@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('sale_number_ebay');
             $table->date('order_date');
             $table->string('buyer_name');
-            $table->string('funding_type')->default('store');
+            $table->enum('funding_type', ['store', 'investor'])->default('store');
             $table->string('status')->default('active');
             $table->timestamps();
         });

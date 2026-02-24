@@ -2,7 +2,7 @@
 
 namespace Database\Seeders;
 
-use App\Models\User;
+use App\Models\SaleExpense;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
@@ -17,6 +17,13 @@ class DatabaseSeeder extends Seeder
     {
         $this->call([
             UserSeeder::class,
+            ProductSeeder::class,
+            SaleSeeder::class,
+            ListingSeeder::class,
+            StockSeeder::class,
+            CountrySeeder::class,
+            ShipmentRateSeeder::class,
+            SaleExpenseSeeder::class,
         ]);
     }
 }
